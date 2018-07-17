@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>TextRank算法要点 | Kevin</title>
+  <title>flask静态文件 | Kevin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="TextRank关键词抽取" />
+  <meta name="keywords" content="pythonflask" />
   
   
   
   
-  <meta name="description" content="这个图可以是有向图，也可以是无向图。在有向图中，方向为语料中的行文方向，也可是这个方向的反方向（在刘知远老师的博士论文中，是这样构建有向图的：在每个滑动窗口中，将该窗口中的第一个词指向剩余的其他词）；在无向图中，节点入度等于出度，所以公式中链接到V(i)的点集就是与V(i)相连的点，V(j)链接出去的点集就是V(j)与相连的点。 图中的边可以有权值，也可以没有权值。没有权值的话，和PageRan">
-<meta name="keywords" content="TextRank,关键词抽取">
+  <meta name="description" content="解决flask静态文件的问题  路径问题：默认访问static/文件路径，所以需要再py文件所在目录建立一个目录static，把静态文件保存到这个目录下 每次覆盖原静态文件，总是访问到同一个文件：在文件名后面加一个可以变化的东西，如文件名+?_t=time.time()">
+<meta name="keywords" content="python,flask">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TextRank算法要点">
-<meta property="og:url" content="http://www.zhf-kevin.com/2018/07/08/TextRank算法要点/index.html">
+<meta property="og:title" content="flask静态文件">
+<meta property="og:url" content="http://www.zhf-kevin.com/2018/07/17/flask静态文件/index.html">
 <meta property="og:site_name" content="Kevin">
-<meta property="og:description" content="这个图可以是有向图，也可以是无向图。在有向图中，方向为语料中的行文方向，也可是这个方向的反方向（在刘知远老师的博士论文中，是这样构建有向图的：在每个滑动窗口中，将该窗口中的第一个词指向剩余的其他词）；在无向图中，节点入度等于出度，所以公式中链接到V(i)的点集就是与V(i)相连的点，V(j)链接出去的点集就是V(j)与相连的点。 图中的边可以有权值，也可以没有权值。没有权值的话，和PageRan">
+<meta property="og:description" content="解决flask静态文件的问题  路径问题：默认访问static/文件路径，所以需要再py文件所在目录建立一个目录static，把静态文件保存到这个目录下 每次覆盖原静态文件，总是访问到同一个文件：在文件名后面加一个可以变化的东西，如文件名+?_t=time.time()">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-16T14:29:35.889Z">
+<meta property="og:updated_time" content="2018-07-17T14:13:32.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TextRank算法要点">
-<meta name="twitter:description" content="这个图可以是有向图，也可以是无向图。在有向图中，方向为语料中的行文方向，也可是这个方向的反方向（在刘知远老师的博士论文中，是这样构建有向图的：在每个滑动窗口中，将该窗口中的第一个词指向剩余的其他词）；在无向图中，节点入度等于出度，所以公式中链接到V(i)的点集就是与V(i)相连的点，V(j)链接出去的点集就是V(j)与相连的点。 图中的边可以有权值，也可以没有权值。没有权值的话，和PageRan">
+<meta name="twitter:title" content="flask静态文件">
+<meta name="twitter:description" content="解决flask静态文件的问题  路径问题：默认访问static/文件路径，所以需要再py文件所在目录建立一个目录static，把静态文件保存到这个目录下 每次覆盖原静态文件，总是访问到同一个文件：在文件名后面加一个可以变化的东西，如文件名+?_t=time.time()">
   
     <link rel="alternate" href="/atom.xml" title="Kevin" type="application/atom+xml">
   
@@ -105,7 +105,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-TextRank算法要点" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-flask静态文件" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -113,7 +113,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      TextRank算法要点
+      flask静态文件
     </h1>
   
 
@@ -121,8 +121,8 @@
     
     <div class="article-meta">
       
-	<a href="/2018/07/08/TextRank算法要点/" class="article-date">
-	  <time datetime="2018-07-08T10:01:45.000Z" itemprop="datePublished">七月 8, 2018</time>
+	<a href="/2018/07/17/flask静态文件/" class="article-date">
+	  <time datetime="2018-07-17T14:00:40.000Z" itemprop="datePublished">七月 17, 2018</time>
 	</a>
 
       
@@ -133,11 +133,10 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>这个图可以是有向图，也可以是无向图。在有向图中，方向为语料中的行文方向，也可是这个方向的反方向（在刘知远老师的博士论文中，是这样构建有向图的：在每个滑动窗口中，将该窗口中的第一个词指向剩余的其他词）；在无向图中，节点入度等于出度，所以公式中链接到V(i)的点集就是与V(i)相连的点，V(j)链接出去的点集就是V(j)与相连的点。</li>
-<li>图中的边可以有权值，也可以没有权值。没有权值的话，和PageRank公式基本一致了；如果有权值，这个权值可以是两个候选词共现的次数，也可以是两个候选词的相关度，总之可以自己定义。</li>
-<li>滑动窗口不是越大越好。在算法提出者论文展示的实验中，滑动窗口为2时的无向图，效果最好。</li>
-<li>所谓收敛，就是有一个阈值，节点权重更新大小（原值与更新后值的差）不超过这个阈值时就是收敛状态，整个图收敛就是所有点都达到收敛状态。</li>
+        <p>解决flask静态文件的问题</p>
+<ul>
+<li>路径问题：默认访问static/文件路径，所以需要再py文件所在目录建立一个目录static，把静态文件保存到这个目录下</li>
+<li>每次覆盖原静态文件，总是访问到同一个文件：在文件名后面加一个可以变化的东西，如文件名+?_t=time.time()</li>
 </ul>
 
       
@@ -149,7 +148,7 @@
 
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TextRank/">TextRank</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/关键词抽取/">关键词抽取</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask/">flask</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 
       
     </footer>
@@ -159,19 +158,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/07/17/flask静态文件/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          flask静态文件
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/07/08/《人类群星闪耀时》读书笔记/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/07/08/TextRank算法要点/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">《人类群星闪耀时》读书笔记</div>
+      <div class="article-nav-title">TextRank算法要点</div>
     </a>
   
 </nav>
